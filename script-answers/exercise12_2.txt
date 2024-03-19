@@ -1,0 +1,10 @@
+Script started on 2024-03-19 18:38:27+01:00 [TERM="xterm-256color" TTY="/dev/pts/7" COLUMNS="108" LINES="49"]
+[?2004h]0;visi@DESKTOP-02OU5ML: ~/part12-containers-applications[01;32mvisi@DESKTOP-02OU5ML[00m:[01;34m~/part12-containers-applications[00m$ [7mdocker container run -it ubuntu bash[27mdocker container run -it ubuntu bash
+[?2004l[?2004h]0;root@37e2bda9e6ca: /root@37e2bda9e6ca:/# [7mmkdir -p /usr/src/app[27mmkdir -p /usr/src/appp  [1P[1P[1P[1P[1@ 
+[?2004l[?2004h]0;root@37e2bda9e6ca: /root@37e2bda9e6ca:/# [7mtouch /usr/src/app/index.js[27mtouch /usr/src/app/index.js
+[?2004l[?2004h]0;root@37e2bda9e6ca: /root@37e2bda9e6ca:/# [K[7mexit[27mexit
+[?2004lexit
+[?2004h]0;visi@DESKTOP-02OU5ML: ~/part12-containers-applications[01;32mvisi@DESKTOP-02OU5ML[00m:[01;34m~/part12-containers-applications[00m$ exit
+[?2004lexit
+
+Script done on 2024-03-19 18:39:20+01:00 [COMMAND_EXIT_CODE="0"]
