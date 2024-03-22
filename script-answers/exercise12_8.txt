@@ -1,0 +1,51 @@
+Script started on 2024-03-21 20:14:08+01:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="118" LINES="21"]
+[?2004h]0;visi@DESKTOP-02OU5ML: ~/part12-containers-applications[01;32mvisi@DESKTOP-02OU5ML[00m:[01;34m~/part12-containers-applications[00m$ docker contaienr l[K[K[K[K[Kner ls
+[?2004lCONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS                                         NAMES
+8e3cc3f841b2   nginx     "/docker-entrypoint.…"   4 minutes ago   Up 4 minutes   0.0.0.0:8080->80/tcp, :::8080->80/tcp         romantic_mclean
+80ca6f03aaf4   mongo     "docker-entrypoint.s…"   4 hours ago     Up 2 minutes   0.0.0.0:3456->27017/tcp, :::3456->27017/tcp   todo-backend-mongo-1
+[?2004h]0;visi@DESKTOP-02OU5ML: ~/part12-containers-applications[01;32mvisi@DESKTOP-02OU5ML[00m:[01;34m~/part12-containers-applications[00m$ [K]0;visi@DESKTOP-02OU5ML: ~/part12-containers-applications[01;32mvisi@DESKTOP-02OU5ML[00m:[01;34m~/part12-containers-applications[00m$ [K]0;visi@DESKTOP-02OU5ML: ~/part12-containers-applications[01;32mvisi@DESKTOP-02OU5ML[00m:[01;34m~/part12-containers-applications[00m$ docker container stop romantic_mclean 
+[?2004lromantic_mclean
+[?2004h]0;visi@DESKTOP-02OU5ML: ~/part12-containers-applications[01;32mvisi@DESKTOP-02OU5ML[00m:[01;34m~/part12-containers-applications[00m$ docker container stop romantic_mclean [1P[1P[1P[1P[1@r[1@m
+[?2004lromantic_mclean
+[?2004h]0;visi@DESKTOP-02OU5ML: ~/part12-containers-applications[01;32mvisi@DESKTOP-02OU5ML[00m:[01;34m~/part12-containers-applications[00m$ docker container rm romantic_mclean [2@stop[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K
+[?2004lCONTAINER ID   IMAGE     COMMAND                  CREATED       STATUS         PORTS                                         NAMES
+80ca6f03aaf4   mongo     "docker-entrypoint.s…"   4 hours ago   Up 2 minutes   0.0.0.0:3456->27017/tcp, :::3456->27017/tcp   todo-backend-mongo-1
+[?2004h]0;visi@DESKTOP-02OU5ML: ~/part12-containers-applications[01;32mvisi@DESKTOP-02OU5ML[00m:[01;34m~/part12-containers-applications[00m$ [K]0;visi@DESKTOP-02OU5ML: ~/part12-containers-applications[01;32mvisi@DESKTOP-02OU5ML[00m:[01;34m~/part12-containers-applications[00m$ docker exec -it todo-backend-mongo-1 mongosh
+[?2004l]0;mongosh mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	65fc87b023fdb2879edb83af
+Connecting to:		[1m[32mmongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.0[0m
+Using MongoDB:		7.0.7
+[1m[33mUsing Mongosh[0m:		2.2.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+[1G[0J [1G[1G[0Jtest> [7G-u root -p example
+Uncaught:
+[1m[31mSyntaxError[0m: Missing semicolon. (1:2)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m [33m-[39mu root [33m-[39mp example[0m
+[0m [90m   |[39m   [31m[1m^[22m[39m[0m
+[0m [90m 2 |[39m[0m
+
+[1G[0Jtest> [7G--username [1G[0Jtest> --username[17G
+Uncaught [1m[31mReferenceError[0m: username is not defined
+[1G[0Jtest> [7G--username root
+Uncaught:
+[1m[31mSyntaxError[0m: Missing semicolon. (1:10)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m [33m--[39musername root[0m
+[0m [90m   |[39m           [31m[1m^[22m[39m[0m
+[0m [90m 2 |[39m[0m
+
+[1G[0Jtest> [7G[1G[0Jtest> --username root[22G[1D[1D[1D[1D[1D[1G[0Jtest> --username  root[18G[1G[0Jtest> --username : root[19G[5C
+Uncaught:
+[1m[31mSyntaxError[0m: Missing semicolon. (1:10)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m [33m--[39musername [33m:[39m root[0m
+[0m [90m   |[39m           [31m[1m^[22m[39m[0m
+[0m [90m 2 |[39m[0m
+
+[1G[0Jtest> 
